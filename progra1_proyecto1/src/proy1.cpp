@@ -25,7 +25,7 @@ int menu()
 	cout << "1. Ver reglas del juego.. " << endl;
 	cout << "2. Iniciar Juego." << endl;
 	cout << "3. Salir." << endl;
-	cout << "#########################" << endl;
+	cout << "\n#########################" << endl;
 
 	cin>>opcion;
 

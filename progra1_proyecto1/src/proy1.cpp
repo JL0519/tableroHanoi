@@ -45,7 +45,7 @@ cout<<"con la menor cantidad de movimientos posibles";
 
 		cout<<"Opcion no valida!!!!!";
 
-	}else{}
+	}
 
 	}while(opcion!=3);
 

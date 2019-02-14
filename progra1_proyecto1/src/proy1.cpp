@@ -29,13 +29,16 @@ int menu()
 
 	cin>>opcion;
 
-	switch(opcion){
+	if(opcion==1){
 
-	case 1: cout<<"-------------------Introducir reglas del juego--------------------------------"; break;
+	cout<<"-------------------Introducir reglas del juego--------------------------------";
 
-	case 2: cout<<"---------------------codigo del juego-----------------------------------------"; break;
+	}else if(opcion==2){
+	cout<<"---------------------codigo del juego-----------------------------------------";
 
-	//default: cout<<"Opcion no valida!!!!!"; break;
+	}else if(opcion!=1 || opcion!=2 || opcion!=3){
+
+		cout<<"Opcion no valida!!!!!";
 	}
 
 	}while(opcion!=3);

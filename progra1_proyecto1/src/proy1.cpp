@@ -29,7 +29,7 @@ int menu()
 
 	cin>>opcion;
 
-	if(opcion==1){
+	if(opcion == 1){
 
 	cout<<"- Se colocan X (cantidad) de discos en uno de los ejes o columnas, en forma decreciente, con el disco mayor en la base"<<endl;
 cout<<"- El juego consiste en trasladar los discos de dicho eje a cualquiera de los dos restantes"<<endl;
@@ -44,7 +44,8 @@ cout<<"con la menor cantidad de movimientos posibles";
 	}else if(opcion!=1 || opcion!=2 || opcion!=3){
 
 		cout<<"Opcion no valida!!!!!";
-	}
+
+	}else{}
 
 	}while(opcion!=3);
 

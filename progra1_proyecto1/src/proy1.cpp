@@ -39,7 +39,7 @@ cout<<"estando prohibido colocar un disco de mayor diámetro sobre uno de menor 
 cout<<"con la menor cantidad de movimientos posibles";
 
 	}else if(opcion==2){
-	cout<<"---------------------codigo del juego-----------------------------------------";
+	cout<<"---------------------codigo del juego!!-----------------------------------------";
 
 	}else if(opcion!=1 || opcion!=2 || opcion!=3){
 

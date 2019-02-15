@@ -6,6 +6,7 @@ using namespace std;
 
 int menu();
 char reglas();
+int estructura();
 
 int main()
 {
@@ -19,13 +20,13 @@ int menu()
 	int opcion;
 
 	system("cls");
-	cout << " .: Bivenvenido al juego Torres de Hanoi:."<<endl;
+	cout << "  .: Bivenvenido al juego Torres de Hanoi:. "<<endl;
 
 	do{
-	cout << "\n######### Menu ##########"<<endl;
-	cout << "1. Ver reglas del juego.. " << endl;
-	cout << "2. Iniciar Juego." << endl;
-	cout << "3. Salir." << endl;
+	cout << endl << "######### Menu ##########"<<endl;
+	cout << " 1. Ver reglas del juego.. " << endl;
+	cout << " 2. Iniciar Juego." << endl;
+	cout << " 3. Salir." << endl;
 	cout << "#########################" << endl;
 
 	cin>>opcion;
@@ -35,16 +36,16 @@ int menu()
 	
 	}else if(opcion==2){
 
-	cout<<"---------------------codigo del juego!!-----------------------------------------";
+	 estructura();
 
 	}else if(opcion!=1 || opcion!=2 || opcion!=3){
 
-		cout<<"Opcion no valida!!!!!, por favor ingrese una opcion disponible.";
+		cout<< endl << "Opcion no valida!!!!!, por favor ingrese una opcion disponible." << endl;
 
 	}
 
 	}while(opcion!=3);
-
+        system("cls");
 	cout<<"Gracias por jugar!!!!!";
 	return 0;
 }
@@ -66,6 +67,35 @@ char reglas(){
 	menu();
 	else
 		exit;
+	return 0;
+}
+
+void jugada(int disco, int torre1, int torre2, int torre3){
+	if (disco == 1){
+		cout << "mover disco de la torre " << torre1 << " a la torre " << torre3 << endl;
+
+	}
+	else{
+		jugada(disco - 1, torre1, torre3, torre2);
+		cout << "mover disco de la torre " << torre1 << " a la torre " << torre3 << endl;
+		jugada(disco - 1, torre2, torre1, torre3);
+	}
+
+}
+
+int estructura() {
+	system("cls");
+	char resp;
+	int torre1 = 1, torre2 = 2, torre3 = 3, disco = 0;
+	cout << " ¿Con cuantos discos quiere jugar? ";
+	cin >> disco;
+	jugada(disco, torre1, torre2, torre3);
+	cout << "Desea volver a jugar s/n: ";
+	cin >> resp;
+	if (resp == 's')
+		estructura();
+	else
+		menu();
 	return 0;
 }
 

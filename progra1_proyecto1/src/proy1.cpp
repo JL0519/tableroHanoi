@@ -75,16 +75,17 @@ void reglas(){
 }
 
 void jugada(int disco, int torre1, int torre2, int torre3){
-	if (disco == 1){
-		cout << "mover disco de la torre " << torre1 << " a la torre " << torre3 << endl;
-
+	if (disco <=0){
+		cout << "el numero de discos nos es valido. " << endl;
+	}
+	else if (disco == 1){
+	cout << "Mover disco de la torre " << torre1 << " hacia la torre " << torre3 << endl;
 	}
 	else{
 		jugada(disco - 1, torre1, torre3, torre2);
 		cout << "mover disco de la torre " << torre1 << " a la torre " << torre3 << endl;
 		jugada(disco - 1, torre2, torre1, torre3);
 	}
-
 }
 
 void estructura() {

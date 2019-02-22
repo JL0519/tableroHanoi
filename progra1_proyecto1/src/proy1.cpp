@@ -4,9 +4,10 @@
 
 using namespace std;
 
-int menu();
-char reglas();
-int estructura();
+void menu();
+void reglas();
+void estructura();
+void jugada();
 
 int main()
 {
@@ -15,7 +16,7 @@ int main()
 	return 0;
 }
 
-int menu()
+void menu()
 {
 	int opcion;
 
@@ -33,24 +34,27 @@ int menu()
 
 	if(opcion == 1){
 		reglas();
-	
-	}else if(opcion==2){
+		}
+	else if(opcion==2){
 
 	 estructura();
 
-	}else if(opcion!=1 || opcion!=2 || opcion!=3){
+	}
+	else if (opcion == 3)
+		{
+			exit(0);
+		}
+	else if(opcion!=1 || opcion!=2 || opcion!=3){
 
 		cout<< endl << "Opcion no valida!!!!!, por favor ingrese una opcion disponible." << endl;
 
 	}
 
 	}while(opcion!=3);
-        system("cls");
-	cout<<"Gracias por jugar!!!!!";
-	return 0;
+        cout<<"Gracias por jugar!!!!!";
 }
 
-char reglas(){
+void reglas(){
 	system("cls");
 	char opc;
 	cout << "####### Reglas del Juego #######" << endl;
@@ -64,10 +68,10 @@ char reglas(){
 	cout << endl << "desea regresar al menu. s/n" << endl;
 	cin >> opc;
 	if (opc = 's' | 'S')
-	menu();
+		menu();
 	else
 		exit;
-	return 0;
+	
 }
 
 void jugada(int disco, int torre1, int torre2, int torre3){
@@ -83,20 +87,21 @@ void jugada(int disco, int torre1, int torre2, int torre3){
 
 }
 
-int estructura() {
+void estructura() {
 	system("cls");
 	char resp;
 	int torre1 = 1, torre2 = 2, torre3 = 3, disco = 0;
 	cout << " ¿Con cuantos discos quiere jugar? ";
 	cin >> disco;
 	jugada(disco, torre1, torre2, torre3);
+	mv = (pow(2, disco))-1;
+	cout << endl << "Los movimientos minimos que se pueden hacer son: " << mv << endl;
 	cout << "Desea volver a jugar s/n: ";
 	cin >> resp;
 	if (resp == 's')
 		estructura();
 	else
 		menu();
-	return 0;
 }
 
 

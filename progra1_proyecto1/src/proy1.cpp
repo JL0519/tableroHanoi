@@ -22,7 +22,6 @@ void menu()
 
 	system("cls");
 	cout << "  .: Bivenvenido al juego Torres de Hanoi:. "<<endl;
-
 	do{
 	cout << endl << "######### Menu ##########"<<endl;
 	cout << " 1. Ver reglas del juego.. " << endl;
